@@ -1,3 +1,4 @@
+import 'package:blobs/blobs.dart';
 import 'package:carouselprofile/background/experiencecard.dart';
 import 'package:carouselprofile/background/size_helpers.dart';
 import 'package:flutter/material.dart';
@@ -21,29 +22,43 @@ class ExperiencePage extends StatelessWidget {
   Widget build(BuildContext context) {
     if (displayWidth(context) < 940) {
       return Container(
-        //height: 550,
         alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 50),
+        //padding: EdgeInsets.symmetric(horizontal: 50),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 60),
+            //SizedBox(height: 30),
             Container(
               //height: 300,
               //width: 350,
               padding: EdgeInsets.only(left: 16),
-              child: UnDraw(
-                height: 150,
-                width: 300,
-                illustration: UnDrawIllustration.online_cv,
-                color: Colors.yellow.shade600,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: Blob.fromID(
+                      id: ['18-7-32702'],
+                      size: 300,
+                      styles: BlobStyles(
+                        //color: Color(0xFFDDDDDD),
+                        color: Colors.red.withOpacity(0.125),
+                      ),
+                    ),
+                  ),
+                  UnDraw(
+                    height: 150,
+                    width: 300,
+                    illustration: UnDrawIllustration.online_cv,
+                    color: Colors.yellow.shade600,
+                  ),
+                ],
               ),
             ),
             Container(
-              //padding: EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 children: [
-                  SizedBox(height: 60),
+                  //SizedBox(height: 30),
                   Text(
                     "Kontiki Research Services",
                     textAlign: TextAlign.center,
@@ -58,11 +73,11 @@ class ExperiencePage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.blue,
+                      color: Color(0xFF708090),
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Text(
                     "ECS Technologies",
@@ -78,11 +93,11 @@ class ExperiencePage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.blue,
+                      color: Color(0xFF708090),
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Text(
                     "Eland Oil and Gas",
@@ -98,11 +113,11 @@ class ExperiencePage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.blue,
+                      color: Color(0xFF708090),
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Text(
                     "BSc Computer Science",
@@ -118,7 +133,7 @@ class ExperiencePage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.blue,
+                      color: Color(0xFF708090),
                     ),
                   ),
                 ],

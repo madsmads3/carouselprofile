@@ -58,11 +58,8 @@ class _contactPageState extends State<contactPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 10),
+            SizedBox(height: 30),
             Container(
-              //width: 240,
-              //height: 240,
-              //alignment: Alignment.topRight,
               child: UnDraw(
                 height: 150,
                 width: 300,
@@ -81,8 +78,6 @@ class _contactPageState extends State<contactPage> {
             ),
           ],
         ),
-        height: 500,
-        //decoration: BoxDecoration(color: Colors.yellow),
       );
     } else {
       return Container(
@@ -147,7 +142,7 @@ class SocialLinks extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            MouseRegion(
+            GestureDetector(
               child: Container(
                 height: 75,
                 width: 75,

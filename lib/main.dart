@@ -5,6 +5,7 @@ import 'package:carouselprofile/get/getprojects.dart';
 import 'package:carouselprofile/pages/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'David Ahmadu',
+      theme: ThemeData(
+        textTheme: GoogleFonts.urbanistTextTheme(Theme.of(context).textTheme),
+      ),
       home: getHome(),
       getPages: [
         GetPage(name: '/home', page: () => getHome()),

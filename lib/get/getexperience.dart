@@ -21,7 +21,7 @@ class _getExperienceState extends State<getExperience> {
         children: [
           Stack(
             children: [
-              BackgroundLines(),
+              //BackgroundLines(),
               Container(
                 //padding: EdgeInsets.symmetric(horizontal: 100),
                 child: Stack(

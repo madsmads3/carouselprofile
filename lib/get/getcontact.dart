@@ -21,7 +21,7 @@ class _getContactState extends State<getContact> {
         children: [
           Stack(
             children: [
-              BackgroundLines(),
+              //BackgroundLines(),
               Container(
                 //padding: EdgeInsets.symmetric(horizontal: 100),
                 child: Stack(

@@ -1,3 +1,4 @@
+import 'package:blobs/blobs.dart';
 import 'package:carouselprofile/background/projectcard.dart';
 import 'package:carouselprofile/background/size_helpers.dart';
 import 'package:flutter/material.dart';
@@ -21,36 +22,53 @@ class ProjectPage extends StatelessWidget {
   Widget build(BuildContext context) {
     if (displayWidth(context) < 940) {
       return Container(
-        //height: 550,
-        //padding: EdgeInsets.symmetric(horizontal: 100),
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 70),
+            //SizedBox(height: 30),
             Container(
               //height: 300,
               //width: 350,
               padding: EdgeInsets.only(left: 16),
-              child: UnDraw(
-                height: 150,
-                width: 300,
-                fit: BoxFit.cover,
-                illustration: UnDrawIllustration.version_control,
-                color: Colors.yellow.shade600,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 30),
+                    child: Blob.fromID(
+                      id: ['18-6-56774'],
+                      size: 300,
+                      styles: BlobStyles(
+                        //color: Color(0xFFDDDDDD),
+                        color: Colors.red.withOpacity(0.125),
+                      ),
+                    ),
+                  ),
+                  UnDraw(
+                    height: 150,
+                    width: 300,
+                    fit: BoxFit.cover,
+                    illustration: UnDrawIllustration.version_control,
+                    color: Colors.yellow.shade600,
+                  ),
+                ],
               ),
             ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 100),
               child: Column(
                 children: [
-                  SizedBox(height: 50),
-                  Text(
-                    "WebFit",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                  //SizedBox(height: 30),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "WebFit",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   Text(
@@ -59,18 +77,21 @@ class ProjectPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.blue,
+                      color: Color(0xFF708090),
                     ),
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    "Round Robin Operating System",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Round Robin Operating System",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   Text(
@@ -79,18 +100,21 @@ class ProjectPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.blue,
+                      color: Color(0xFF708090),
                     ),
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    "Cake Your Day",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Cake Your Day",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   Text(
@@ -99,7 +123,7 @@ class ProjectPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Colors.blue,
+                      color: Color(0xFF708090),
                     ),
                   ),
                 ],

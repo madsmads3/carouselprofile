@@ -21,7 +21,7 @@ class _getProjectsState extends State<getProjects> {
         children: [
           Stack(
             children: [
-              BackgroundLines(),
+              //BackgroundLines(),
               Container(
                 //padding: EdgeInsets.symmetric(horizontal: 100),
                 child: Stack(
